@@ -9,6 +9,9 @@ import { NgForm } from '@angular/forms';
 })
 export class RegisterService {
 
+  //Initialising and Array to get the Register List
+  list: Register[] = [];
+
   //Declaration by default for form
   formSubmitted: boolean = false;
 
@@ -24,6 +27,18 @@ export class RegisterService {
   //Post Method to store data into the Database using API
   postRegister(){
     return this.http.post(this.url,this.formData)
+  }
+
+  //Get the Data from the Database
+  refreshList(){
+    this.http.get(this.url)
+    .subscribe({
+      next: res => {
+        console.log(res);
+        this.list = res as Register[];
+      },
+      error: err => {console.log(err)}
+    })
   }
 
   //Reset Form

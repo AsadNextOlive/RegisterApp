@@ -26,6 +26,7 @@ export class RegisterComponent implements OnInit {
     .subscribe({
       next: res => {
         console.log(res);
+        this.service.list = res as Register[];
         this.service.resetForm(from);
         // this.toastr.success('Record Inserted', 'Registration');
       },

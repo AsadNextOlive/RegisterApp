@@ -9,12 +9,15 @@ import { HomeComponent } from './Home/home/home.component';
 //Adding HttpClient for API
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { RegisterListComponent } from './register-list/register-list.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    RegisterListComponent
   ],
   imports: [
     BrowserModule,

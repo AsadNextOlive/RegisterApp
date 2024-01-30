@@ -17,6 +17,28 @@ namespace RegisterAPI.Controllers
             _context = context;
         }
 
+        // GET: api/Register
+        [HttpGet]
+        public ActionResult<IEnumerable<Register>> GetRegister()
+        {
+            try
+            {
+                var registeredUser = _context.Register.ToList();
+                return Ok(registeredUser);
+            }
+            catch (Exception)
+            {
+                var errorResponse = new CustomerErrorResponse
+                {
+                    Status = 500,
+                    Error = "Internal Server Error",
+                    Data = null
+                };
+                return StatusCode(500, errorResponse);
+            }
+        }
+
+
         //Declaring Success and Error Code
         public class CustomerErrorResponse
         {
@@ -25,6 +47,7 @@ namespace RegisterAPI.Controllers
             public object Data { get; set;}
         }
 
+        // POST: api/Register
         [HttpPost]
         public async Task<ActionResult<Register>> Register(Register register)
         {

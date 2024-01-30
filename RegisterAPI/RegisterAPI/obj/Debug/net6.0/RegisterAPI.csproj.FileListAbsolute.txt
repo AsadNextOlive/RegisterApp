@@ -1,10 +1,3 @@
-C:\Users\Nextolive\Documents\Visual Studio 2022\Project\newRegisterAPI\RegisterAPI\RegisterAPI\obj\Debug\net6.0\RegisterAPI.csproj.AssemblyReference.cache
-C:\Users\Nextolive\Documents\Visual Studio 2022\Project\newRegisterAPI\RegisterAPI\RegisterAPI\obj\Debug\net6.0\RegisterAPI.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Nextolive\Documents\Visual Studio 2022\Project\newRegisterAPI\RegisterAPI\RegisterAPI\obj\Debug\net6.0\RegisterAPI.AssemblyInfoInputs.cache
-C:\Users\Nextolive\Documents\Visual Studio 2022\Project\newRegisterAPI\RegisterAPI\RegisterAPI\obj\Debug\net6.0\RegisterAPI.AssemblyInfo.cs
-C:\Users\Nextolive\Documents\Visual Studio 2022\Project\newRegisterAPI\RegisterAPI\RegisterAPI\obj\Debug\net6.0\RegisterAPI.csproj.CoreCompileInputs.cache
-C:\Users\Nextolive\Documents\Visual Studio 2022\Project\newRegisterAPI\RegisterAPI\RegisterAPI\obj\Debug\net6.0\RegisterAPI.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Nextolive\Documents\Visual Studio 2022\Project\newRegisterAPI\RegisterAPI\RegisterAPI\obj\Debug\net6.0\RegisterAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Nextolive\Documents\Visual Studio 2022\Project\newRegisterAPI\RegisterAPI\RegisterAPI\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\Nextolive\Documents\Visual Studio 2022\Project\newRegisterAPI\RegisterAPI\RegisterAPI\bin\Debug\net6.0\appsettings.json
 C:\Users\Nextolive\Documents\Visual Studio 2022\Project\newRegisterAPI\RegisterAPI\RegisterAPI\bin\Debug\net6.0\RegisterAPI.exe
@@ -52,6 +45,13 @@ C:\Users\Nextolive\Documents\Visual Studio 2022\Project\newRegisterAPI\RegisterA
 C:\Users\Nextolive\Documents\Visual Studio 2022\Project\newRegisterAPI\RegisterAPI\RegisterAPI\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\Nextolive\Documents\Visual Studio 2022\Project\newRegisterAPI\RegisterAPI\RegisterAPI\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Nextolive\Documents\Visual Studio 2022\Project\newRegisterAPI\RegisterAPI\RegisterAPI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\Nextolive\Documents\Visual Studio 2022\Project\newRegisterAPI\RegisterAPI\RegisterAPI\obj\Debug\net6.0\RegisterAPI.csproj.AssemblyReference.cache
+C:\Users\Nextolive\Documents\Visual Studio 2022\Project\newRegisterAPI\RegisterAPI\RegisterAPI\obj\Debug\net6.0\RegisterAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Nextolive\Documents\Visual Studio 2022\Project\newRegisterAPI\RegisterAPI\RegisterAPI\obj\Debug\net6.0\RegisterAPI.AssemblyInfoInputs.cache
+C:\Users\Nextolive\Documents\Visual Studio 2022\Project\newRegisterAPI\RegisterAPI\RegisterAPI\obj\Debug\net6.0\RegisterAPI.AssemblyInfo.cs
+C:\Users\Nextolive\Documents\Visual Studio 2022\Project\newRegisterAPI\RegisterAPI\RegisterAPI\obj\Debug\net6.0\RegisterAPI.csproj.CoreCompileInputs.cache
+C:\Users\Nextolive\Documents\Visual Studio 2022\Project\newRegisterAPI\RegisterAPI\RegisterAPI\obj\Debug\net6.0\RegisterAPI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Nextolive\Documents\Visual Studio 2022\Project\newRegisterAPI\RegisterAPI\RegisterAPI\obj\Debug\net6.0\RegisterAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Nextolive\Documents\Visual Studio 2022\Project\newRegisterAPI\RegisterAPI\RegisterAPI\obj\Debug\net6.0\staticwebassets\msbuild.RegisterAPI.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\Nextolive\Documents\Visual Studio 2022\Project\newRegisterAPI\RegisterAPI\RegisterAPI\obj\Debug\net6.0\staticwebassets\msbuild.build.RegisterAPI.props
 C:\Users\Nextolive\Documents\Visual Studio 2022\Project\newRegisterAPI\RegisterAPI\RegisterAPI\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.RegisterAPI.props

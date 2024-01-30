@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Register } from 'src/app/Shared/register.model';
+import { RegisterService } from 'src/app/Shared/register.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(public service: RegisterService) { }
 
   ngOnInit(): void {
+    this.service.refreshList();
+  }
+
+  populateForm(selectedRecord: Register){
+    this.service.formData = Object.assign({}, selectedRecord);
   }
 
 }

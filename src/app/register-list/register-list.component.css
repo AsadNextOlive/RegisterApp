@@ -1,0 +1,15 @@
+.height{
+    height: 380px;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.o-flow::-webkit-scrollbar{
+    width: 5px;
+}
+
+.o-flow::-webkit-scrollbar-thumb{
+    background-color: rgba(128, 128, 128, 0.596);
+    border-radius: 5px;;
+    transition: background-color 0.3s;
+}
