@@ -1,0 +1,23 @@
+<form #form="ngForm" (submit)="onSubmit(form)">
+    <input type="hidden" name="UserId" [value]="service.formData.userId">
+    <div class="form-group mb-4">
+        <label for="Username" class="form-label">Username</label>
+        <input type="text" class="form-control" #Username="ngModel" name="Username" [(ngModel)]="service.formData.username" required>
+    </div>
+    <div class="form-group mb-4">
+        <label for="Password" class="form-label">Password</label>
+        <input type="text" class="form-control" #Password="ngModel" name="Password" [(ngModel)]="service.formData.password" required>
+    </div>
+    <div class="form-group mb-4">
+        <label for="Email" class="form-label">Email</label>
+        <input type="email" class="form-control" #Email="ngModel" name="Email" [(ngModel)]="service.formData.email" required>
+    </div>
+    <div class="form-group mb-4">
+        <label for="Phone" class="form-label">Phone</label>
+        <input type="text" class="form-control" #Phone="ngModel" name="Phone" [(ngModel)]="service.formData.phone">
+    </div>
+    <div class="btn-group">
+        <button class="btn-success btn-sm" type="submit">Sumbit</button>
+        <button class="btn-secondary btn-sm ml-2" type="reset">Cancel</button>
+    </div>
+</form> 
