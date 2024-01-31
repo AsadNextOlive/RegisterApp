@@ -17,7 +17,7 @@
         <input type="text" class="form-control" #Phone="ngModel" name="Phone" [(ngModel)]="service.formData.phone">
     </div>
     <div class="btn-group">
-        <button class="btn-success btn-sm" type="submit">Sumbit</button>
+        <button class="btn-success btn-sm" type="submit" [disabled]="!form.valid">Sumbit</button>
         <button class="btn-secondary btn-sm ml-2" type="reset">Cancel</button>
     </div>
 </form> 

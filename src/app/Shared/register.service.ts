@@ -29,6 +29,11 @@ export class RegisterService {
     return this.http.post(this.url,this.formData)
   }
 
+  //Method to delete the data from Database through API
+  deleteRegisteredUser(id: number){
+    return this.http.delete(this.url + '/' + id)
+  }
+
   //Get the Data from the Database
   refreshList(){
     this.http.get(this.url)

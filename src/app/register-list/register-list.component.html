@@ -1,12 +1,38 @@
 <div class="container my-5 mb-5 ">
     <h5 class="text-center my-3 text-uppercase">Registered User</h5>
-    <ul class="list-group overflow-auto height shadow o-flow">
-        <li class="list-group-item" *ngFor="let ru of service.list">
-            <div (click)="populateForm(ru)">
-                <h6>{{ru.username}}</h6>
-                <p>User ID {{ru.userId}}</p>
-                <p>{{ru.email}} | Phone {{ru.phone}}</p>
-            </div>
-        </li>
-    </ul>
+    <!-- Table -->
+    <div class="height o-flow">
+        <table class="table">
+            <thead>
+                <tr class="sticky-top bg-color">
+                    <th scope="col">User ID</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let ru of service.list">
+                    <td>{{ru.userId}}</td>
+                    <td>{{ru.username}}</td>
+                    <td>{{ru.email}}</td>
+                    <td>{{ru.phone}}</td>
+                    <!-- <td><span><i class="fa-solid fa-trash mouse-hover" (click)="onDelete(ru.userId)"></i></span></td> -->
+                    <!-- <td><span><img src="../../assets/Images/Delete-iCon.gif" alt="Delete"></span></td> -->
+                    <td><lord-icon
+                        src="https://cdn.lordicon.com/drxwpfop.json"
+                        trigger="hover"
+                        style="width: 35px; height: 35px; margin-right: 18px;" (click)="onDelete(ru.userId)">
+                    </lord-icon>
+                    <lord-icon
+                    src="https://cdn.lordicon.com/ghhwiltn.json"
+                    trigger="hover"
+                    style="width: 35px;height: 35px;">
+                </lord-icon></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Table -->
 </div>
