@@ -34,6 +34,17 @@ export class RegisterService {
     return this.http.delete(this.url + '/' + id)
   }
 
+  //Method to update the data
+  putRegisteredUser(){
+    return this.http.put(this.url +'/'+ this.formData.userId, this.formData)
+  }
+
+  //Method to search data by Email
+  searchByEmail(email: string){    
+    // return this.http.get(`${this.url}?email=${email}`);
+    return this.http.get(`${this.url}/search?email=${email}`);
+  }
+
   //Get the Data from the Database
   refreshList(){
     this.http.get(this.url)

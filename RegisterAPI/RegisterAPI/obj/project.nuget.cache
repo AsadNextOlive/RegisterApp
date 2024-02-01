@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Llm5YvhzG5JgZqYOeu0O3udeZoHRDnhx04yXnSuKEdx+DVc3scJaqe+NR/BLD+pky4aLNMDQiH/bFz74dfIdfw==",
+  "dgSpecHash": "XAvXin1NMskplc+ajIQasJfWHAtstCpamFz67fSDEgC7H7Z1V5Hk1kwolwfldrSUlcxrJHqPs2BuCNLIyk6PrA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nextolive\\Documents\\Visual Studio 2022\\Project\\newRegisterAPI\\RegisterAPI\\RegisterAPI\\RegisterAPI.csproj",
+  "projectFilePath": "C:\\Users\\Nextolive\\Documents\\Visual Studio 2022\\Project\\RegisterAPI\\RegisterAPI\\RegisterAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nextolive\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Nextolive\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

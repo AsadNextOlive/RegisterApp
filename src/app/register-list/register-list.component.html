@@ -1,7 +1,10 @@
 <div class="container my-5 mb-5 ">
     <h5 class="text-center my-3 text-uppercase">Registered User</h5>
     <!-- Table -->
-    <div class="height o-flow">
+    <!-- <div class="height o-flow"> -->
+        <input type="search" placeholder="Search" #emailInput>
+        <button (click)="onSearch(emailInput)">Search</button>
+    <div>
         <table class="table">
             <thead>
                 <tr class="sticky-top bg-color">
@@ -13,26 +16,32 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let ru of service.list">
+                <tr *ngFor="let ru of service.list?.slice(0, displayCount) || []">
                     <td>{{ru.userId}}</td>
                     <td>{{ru.username}}</td>
                     <td>{{ru.email}}</td>
                     <td>{{ru.phone}}</td>
                     <!-- <td><span><i class="fa-solid fa-trash mouse-hover" (click)="onDelete(ru.userId)"></i></span></td> -->
                     <!-- <td><span><img src="../../assets/Images/Delete-iCon.gif" alt="Delete"></span></td> -->
-                    <td><lord-icon
-                        src="https://cdn.lordicon.com/drxwpfop.json"
-                        trigger="hover"
-                        style="width: 35px; height: 35px; margin-right: 18px;" (click)="onDelete(ru.userId)">
-                    </lord-icon>
-                    <lord-icon
-                    src="https://cdn.lordicon.com/ghhwiltn.json"
-                    trigger="hover"
-                    style="width: 35px;height: 35px;">
-                </lord-icon></td>
+                    <td><lord-icon src="https://cdn.lordicon.com/drxwpfop.json" trigger="hover"
+                            style="width: 35px; height: 35px; margin-right: 18px;" (click)="onDelete(ru.userId)">
+                        </lord-icon>
+                        <lord-icon src="https://cdn.lordicon.com/ghhwiltn.json" trigger="hover"
+                            style="width: 35px;height: 35px;" (click)="populateForm(ru)">
+                        </lord-icon>
+                    </td>
                 </tr>
             </tbody>
         </table>
+    </div>
+    <div class="text-center mt-3" *ngIf="visibleLoadMore()">
+        <div class="f-flex justify-content-center align-items-center">
+            <button class="btn border-2" (click)="loadMore()">
+                <lord-icon src="https://cdn.lordicon.com/qemzqkld.json" trigger="hover" stroke="bold"
+                    style="width: 25px;height: 25px;">
+                </lord-icon>
+            </button>
+        </div>
     </div>
     <!-- Table -->
 </div>

@@ -11,8 +11,8 @@ using RegisterAPI.Data;
 namespace RegisterAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240129082834_newRegister")]
-    partial class newRegister
+    [Migration("20240110131516_Initial Migration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -33,7 +33,8 @@ namespace RegisterAPI.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("Password")
                         .IsRequired()
@@ -41,7 +42,8 @@ namespace RegisterAPI.Migrations
 
                     b.Property<string>("Phone")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.Property<string>("Username")
                         .IsRequired()

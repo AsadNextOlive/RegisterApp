@@ -2444,11 +2444,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nextolive\\Documents\\Visual Studio 2022\\Project\\newRegisterAPI\\RegisterAPI\\RegisterAPI\\RegisterAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Nextolive\\Documents\\Visual Studio 2022\\Project\\RegisterAPI\\RegisterAPI\\RegisterAPI.csproj",
       "projectName": "RegisterAPI",
-      "projectPath": "C:\\Users\\Nextolive\\Documents\\Visual Studio 2022\\Project\\newRegisterAPI\\RegisterAPI\\RegisterAPI\\RegisterAPI.csproj",
+      "projectPath": "C:\\Users\\Nextolive\\Documents\\Visual Studio 2022\\Project\\RegisterAPI\\RegisterAPI\\RegisterAPI.csproj",
       "packagesPath": "C:\\Users\\Nextolive\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nextolive\\Documents\\Visual Studio 2022\\Project\\newRegisterAPI\\RegisterAPI\\RegisterAPI\\obj\\",
+      "outputPath": "C:\\Users\\Nextolive\\Documents\\Visual Studio 2022\\Project\\RegisterAPI\\RegisterAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Nextolive\\AppData\\Roaming\\NuGet\\NuGet.Config",

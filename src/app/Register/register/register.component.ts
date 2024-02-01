@@ -18,20 +18,45 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
   //Submit Button Function
-  onSubmit(from: NgForm){
-    console.log('clicked')
+  onSubmit(form: NgForm){
+    if (form.valid) {
+      if (this.service.formData.userId == 0) {
+        this.insertRecord(form)
+      }
+      else{
+        this.updateRecord(form)
+      }
+    }
+  }
+
+
+  insertRecord(form: NgForm){
     this.service.postRegister()
     .subscribe({
       next: res => {
         console.log(res);
         this.service.list = res as Register[];
-        this.service.resetForm(from);
+        this.service.resetForm(form);
         this.service.refreshList();
-        // this.toastr.success('Record Inserted', 'Registration');
       },
       error: err => {console.log(err)}
+    })
+  }
+
+
+  updateRecord(form: NgForm){
+    this.service.putRegisteredUser()
+    .subscribe({
+      next: res => {
+        console.log(res);
+        this.service.list = res as Register[];
+        this.service.resetForm(form);
+        this.service.refreshList();
+      },
+      error: err => {console.log(err);
+      }
     })
   }
   

@@ -16,6 +16,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("SQLServerConnection"));
 });
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -25,11 +26,13 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+//Configure the CORS policy to get the access of api method such as get,put,post etc.
 app.UseCors(options =>
 options.WithOrigins("http://localhost:4200")
 .AllowAnyMethod()
 .AllowAnyHeader());
 
+app.UseHttpsRedirection();
 
 app.UseAuthorization();
 

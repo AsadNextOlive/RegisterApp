@@ -17,37 +17,15 @@ namespace RegisterAPI.Controllers
             _context = context;
         }
 
-        // GET: api/Register
-        [HttpGet]
-        public ActionResult<IEnumerable<Register>> GetRegister()
-        {
-            try
-            {
-                var registeredUser = _context.Register.ToList();
-                return Ok(registeredUser);
-            }
-            catch (Exception)
-            {
-                var errorResponse = new CustomerErrorResponse
-                {
-                    Status = 500,
-                    Error = "Internal Server Error",
-                    Data = null
-                };
-                return StatusCode(500, errorResponse);
-            }
-        }
-
-
-        //Declaring Success and Error Code
-        public class CustomerErrorResponse
+        //Declaring StatusCode and Error
+        public class CustomeErrorResponse
         {
             public int Status { get; set; }
             public string Error { get; set; }
-            public object Data { get; set;}
+            public object Data { get; set; }
         }
 
-        // POST: api/Register
+        //Post Method for storing data into the Database
         [HttpPost]
         public async Task<ActionResult<Register>> Register(Register register)
         {
@@ -55,25 +33,26 @@ namespace RegisterAPI.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    //Custome Error Message
-                    var errorResponse = new CustomerErrorResponse
+                    //Create a custome error response
+                    var errorResponse = new CustomeErrorResponse
                     {
                         Status = 400,
                         Error = "",
                         Data = null
                     };
 
-                    //If email already exist
+                    //Check if email already exist
                     var existingEmail = await _context.Register.FirstOrDefaultAsync(x => x.Email == register.Email);
                     if (existingEmail != null)
                     {
                         errorResponse.Error = "Email Already Exist";
                         return BadRequest(errorResponse);
                     }
+
                     _context.Register.Add(register);
                     await _context.SaveChangesAsync();
 
-                    //Success message
+                    //Success response message
                     var response = new
                     {
                         Status = 200,
