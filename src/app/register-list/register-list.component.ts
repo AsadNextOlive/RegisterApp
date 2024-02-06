@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { RegisterService } from '../Shared/register.service';
 import { Register } from '../Shared/register.model';
 import { LordiconService } from '../Shared/Lordicon.service';
@@ -15,7 +15,8 @@ export class RegisterListComponent implements OnInit {
   displayCount: number = 5;
 
   constructor(public service: RegisterService,
-              public Lordicon: LordiconService) { }
+              public Lordicon: LordiconService,
+              private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
     this.service.refreshList();
@@ -62,7 +63,7 @@ export class RegisterListComponent implements OnInit {
           console.log('Search Results:', res);
           // this.service.list = res as Register[] || [];
           this.service.list = res.Data || [];
-          
+          this.cdr.detectChanges(); // Manually trigger change detection
         },
         error: err => {console.log(err);}
       });

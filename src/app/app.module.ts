@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RegisterListComponent } from './register-list/register-list.component';
 import { LordiconService } from './Shared/Lordicon.service';
+import { SecuredPageComponent } from './secured-page/secured-page.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { LordiconService } from './Shared/Lordicon.service';
     RegisterComponent,
     LoginComponent,
     HomeComponent,
-    RegisterListComponent
+    RegisterListComponent,
+    SecuredPageComponent
   ],
   imports: [
     BrowserModule,

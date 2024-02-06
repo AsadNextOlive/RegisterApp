@@ -5,7 +5,7 @@
         <input type="search" placeholder="Search" #emailInput>
         <button (click)="onSearch(emailInput)">Search</button>
     <div>
-        <table class="table">
+        <table class="table" >
             <thead>
                 <tr class="sticky-top bg-color">
                     <th scope="col">User ID</th>
@@ -15,7 +15,7 @@
                     <th scope="col">Action</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody *ngIf="service.list.length >0">
                 <tr *ngFor="let ru of service.list?.slice(0, displayCount) || []">
                     <td>{{ru.userId}}</td>
                     <td>{{ru.username}}</td>

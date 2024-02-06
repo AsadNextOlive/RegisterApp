@@ -24,6 +24,11 @@ export class RegisterService {
   //Adding HttpClient for API
   constructor(private http: HttpClient) { }
 
+  //Post Method for Login API
+  loginUser(){
+    return this.http.post(this.url +'/'+ this.formData.email, this.formData.password)
+  }
+
   //Post Method to store data into the Database using API
   postRegister(){
     return this.http.post(this.url,this.formData)
