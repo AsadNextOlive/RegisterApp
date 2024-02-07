@@ -26,9 +26,24 @@ export class LoginComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit(): void {
+    
   }
 
   login(){
+    //check if username == null
+    if (!this.credentials.email) {
+      this.loginError = true;
+      this.loginErrorMessage = 'Username is required';
+      return;
+    }
+
+    //check if password == null
+    if (!this.credentials.password) {
+      this.loginError = true;
+      this.loginErrorMessage = 'Password is required';
+      return;
+    }
+
     this.authService.login(this.credentials).subscribe(
       (response) => {
         this.authService.setLoggedIn(true);
@@ -38,7 +53,7 @@ export class LoginComponent implements OnInit {
       (error) =>{
         console.log('Login failed:', error);
         this.loginError = true;
-        this.loginErrorMessage = error.error.Error || 'Username or password is incorrect';
+        this.loginErrorMessage = error.error.Error || 'Invalid username or password';
       }
     );
   }

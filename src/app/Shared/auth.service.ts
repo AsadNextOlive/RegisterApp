@@ -20,7 +20,7 @@ login(credentials: LoginModel): Observable<any> {
 }
 
 setLoggedIn(value: boolean){
-  this.loggedIn= value;
+  this.loggedIn = value;
 }
 
 isLoggedIn(){
